@@ -73,6 +73,10 @@ def triangle_right_justified(r):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
+    new_seq = ''
+    for j in range(r):
+        for k in range(r):
+            print((r - k)*'x')
 
 
 def run_test_triangle_upside_down():
