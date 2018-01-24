@@ -428,13 +428,13 @@ def first_is_elsewhere_too(seq_seq):
     #   practice at loops within loops (within loops within ...)
     # ------------------------------------------------------------------
     for j in range(len(seq_seq)):
-        if len(seq_seq[0]) > 0:
-            for k in range(len(seq_seq[0])):
+        for k in range(len(seq_seq[j])):
+            for i in range(len(seq_seq[0])):
                 current = seq_seq[0][k]
-                if len(seq_seq[j][k]) > 0:
-                    for i in range(len(seq_seq[j] - 1)):
-                        if current == seq_seq[j + 1][i]:
-                            return True
+                for n in range(len(seq_seq[j])):
+                    if current == seq_seq[j][k]:
+                        return True
+    return False
 
 
 # ----------------------------------------------------------------------
